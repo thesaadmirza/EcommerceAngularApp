@@ -1,1 +1,15 @@
-<p>recipe-list works!</p>
+<div class="row">
+  <div class="col-12">
+    <div class="button btn btn-success">
+      New Recipe
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <app-recipe-item
+    (RecipeHandle)="ChangeRecipe($event)"
+    *ngFor="let item of recipes"
+    [recipe]="item"
+  ></app-recipe-item>
+</div>

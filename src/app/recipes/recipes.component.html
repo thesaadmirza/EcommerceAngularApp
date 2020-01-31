@@ -1,1 +1,11 @@
-<p>recipes works!</p>
+<div class="row">
+  <div class="col-5">
+    <app-recipe-list (setRecipe)="updateRecipeView($event)"></app-recipe-list>
+  </div>
+  <div class="col-7">
+    <app-recipe-detail
+      *ngIf="currentRecipe"
+      [currentRecipe]="currentRecipe"
+    ></app-recipe-detail>
+  </div>
+</div>
