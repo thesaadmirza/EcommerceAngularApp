@@ -6,17 +6,28 @@
           <label>
             Name
           </label>
-          <input type="text" id="name" class="form-control" />
+          <input type="text" id="name" class="form-control" #ingredientName />
         </div>
         <div class="col-2 form-group">
           <label>Amount</label>
-          <input type="number" id="amount" class="form-control" />
+          <input
+            type="number"
+            id="amount"
+            class="form-control"
+            #ingredientAmount
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
           <div class="btn-group">
-            <button class="btn btn-success" type="submit">Add</button>
+            <button
+              class="btn btn-success"
+              (click)="addIngredient()"
+              type="button"
+            >
+              Add
+            </button>
             <button class="btn btn-danger" type="button">Delete</button>
             <button class="btn btn-primary" type="button">Reset</button>
           </div>
