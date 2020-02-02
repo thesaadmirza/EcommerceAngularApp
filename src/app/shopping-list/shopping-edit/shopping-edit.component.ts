@@ -3,7 +3,8 @@ import {
   OnInit,
   ViewChild,
   Output,
-  EventEmitter
+  EventEmitter,
+  ElementRef
 } from "@angular/core";
 
 import { Ingredient } from "src/app/shared/ingredient.model";
@@ -14,8 +15,9 @@ import { Ingredient } from "src/app/shared/ingredient.model";
   styleUrls: ["./shopping-edit.component.css"]
 })
 export class ShoppingEditComponent implements OnInit {
-  @ViewChild("ingredientAmount", { static: false }) ingredientAmount;
-  @ViewChild("ingredientName", { static: false }) ingredientName;
+  @ViewChild("ingredientAmount", { static: false })
+  ingredientAmount: ElementRef;
+  @ViewChild("ingredientName", { static: false }) ingredientName: ElementRef;
   ingredient: Ingredient;
   @Output() newIngredientEvent = new EventEmitter<Ingredient>();
   constructor() {}

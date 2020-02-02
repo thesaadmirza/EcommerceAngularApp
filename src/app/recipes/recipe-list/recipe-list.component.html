@@ -9,7 +9,6 @@
 <div class="row">
   <app-recipe-item
     class="col-12"
-    (RecipeHandle)="ChangeRecipe($event)"
     *ngFor="let item of recipes"
     [recipe]="item"
   ></app-recipe-item>

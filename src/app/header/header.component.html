@@ -36,6 +36,8 @@
           <a
             class="nav-link dropdown-toggle"
             href="#"
+            appDropdown
+            #r="appDropdown"
             id="navbarDropdown"
             role="button"
             data-toggle="dropdown"
@@ -44,7 +46,11 @@
           >
             Manage
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div
+            class="dropdown-menu"
+            [ngClass]="{ show: r.isOpen }"
+            aria-labelledby="navbarDropdown"
+          >
             <a class="dropdown-item" href="#">Save Data</a>
             <a class="dropdown-item" href="#">Fetch Data</a>
           </div>

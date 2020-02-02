@@ -10,7 +10,7 @@
 </div>
 <div class="row">
   <div class="col-12">
-    <div class="btn-group" role="group">
+    <div class="btn-group" role="group" appDropdown #r="appDropdown">
       <button
         id="btnGroupDrop1"
         type="button"
@@ -21,7 +21,11 @@
       >
         Manage Recipe
       </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <div
+        class="dropdown-menu"
+        [ngClass]="{ show: r.isOpen }"
+        aria-labelledby="btnGroupDrop1"
+      >
         <a class="dropdown-item" href="#">To Shopping LIst</a>
         <a class="dropdown-item" href="#">Edit Recipe </a>
         <a href="#" class="dropdown-item">Delete Recipe</a>
